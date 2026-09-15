@@ -671,7 +671,7 @@
         body: new URLSearchParams(formData).toString()
       })
       .then(response => {
-  if (!response.ok) throw new Error("Erreur d’envoi");
+        if (!response.ok) throw new Error("Erreur d’envoi");
         form.style.display = "none";
         document.getElementById("successMessage").style.display = "block";
 
