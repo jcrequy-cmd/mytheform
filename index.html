@@ -1,15 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Et si on fabriquait quelque chose ensemble ?</title>
-
-  <meta
-    name="description"
-    content="Je cherche des personnes curieuses, créatives et motivées pour imaginer et réaliser des projets un peu inhabituels à Bienne et alentours."
-  >
+  <meta name="description" content="Je cherche des personnes curieuses, créatives et motivées pour imaginer et réaliser des projets un peu inhabituels à Bienne et alentours.">
 
   <style>
     :root {
@@ -25,24 +21,15 @@
       --max-width: 760px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family:
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.6;
     }
 
@@ -50,8 +37,6 @@
       width: min(100% - 32px, var(--max-width));
       margin: 0 auto;
     }
-
-    /* HERO */
 
     .hero {
       padding: 70px 0 50px;
@@ -86,11 +71,7 @@
       font-size: 1.08rem;
     }
 
-    .hero-intro strong {
-      color: var(--text);
-    }
-
-    /* IDEA GRID */
+    .hero-intro strong { color: var(--text); }
 
     .idea-grid {
       display: grid;
@@ -107,8 +88,6 @@
       font-size: 0.95rem;
     }
 
-    /* FORM */
-
     .form-card {
       padding: clamp(22px, 5vw, 42px);
       background: var(--card);
@@ -117,9 +96,7 @@
       box-shadow: 0 15px 45px rgba(0,0,0,0.05);
     }
 
-    .form-header {
-      margin-bottom: 35px;
-    }
+    .form-header { margin-bottom: 35px; }
 
     .form-header h2 {
       margin: 0 0 8px;
@@ -132,9 +109,7 @@
       color: var(--muted);
     }
 
-    .question {
-      margin-bottom: 32px;
-    }
+    .question { margin-bottom: 32px; }
 
     .question-number {
       display: block;
@@ -171,9 +146,7 @@
       color: var(--text);
       font: inherit;
       outline: none;
-      transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
     textarea {
@@ -181,23 +154,14 @@
       resize: vertical;
     }
 
-    input:focus,
-    textarea:focus,
-    select:focus {
+    input:focus, textarea:focus, select:focus {
       border-color: var(--accent);
       box-shadow: 0 0 0 3px rgba(232,111,81,0.12);
     }
 
-    /* OPTIONS */
+    .options { display: grid; gap: 9px; }
 
-    .options {
-      display: grid;
-      gap: 9px;
-    }
-
-    .option {
-      position: relative;
-    }
+    .option { position: relative; }
 
     .option input {
       position: absolute;
@@ -211,10 +175,7 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       cursor: pointer;
-      transition:
-        background 0.15s ease,
-        border-color 0.15s ease,
-        transform 0.15s ease;
+      transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
     }
 
     .option label:hover {
@@ -226,8 +187,6 @@
       border-color: var(--accent);
       background: #fff4ef;
     }
-
-    /* PROGRESS */
 
     .progress-wrapper {
       position: sticky;
@@ -260,8 +219,6 @@
       transition: width 0.2s ease;
     }
 
-    /* PRIVACY */
-
     .privacy {
       margin-top: 35px;
       padding: 18px;
@@ -271,11 +228,7 @@
       font-size: 0.82rem;
     }
 
-    .privacy strong {
-      color: var(--text);
-    }
-
-    /* SUBMIT */
+    .privacy strong { color: var(--text); }
 
     .submit-area {
       margin-top: 38px;
@@ -293,9 +246,7 @@
       font-weight: 800;
       font-size: 1rem;
       cursor: pointer;
-      transition:
-        background 0.2s ease,
-        transform 0.15s ease;
+      transition: background 0.2s ease, transform 0.15s ease;
     }
 
     button:hover {
@@ -309,16 +260,12 @@
       font-size: 0.8rem;
     }
 
-    /* FOOTER */
-
     footer {
       padding: 55px 0;
       text-align: center;
       color: var(--muted);
       font-size: 0.8rem;
     }
-
-    /* SUCCESS */
 
     .success {
       display: none;
@@ -331,58 +278,42 @@
       font-size: 3rem;
     }
 
-    .success h2 {
-      margin-bottom: 8px;
-    }
+    .success h2 { margin-bottom: 8px; }
 
-    .success p {
-      color: var(--muted);
-    }
-
-    /* MOBILE */
+    .success p { color: var(--muted); }
 
     @media (max-width: 600px) {
-      .hero {
-        padding: 50px 0 35px;
-      }
+      .hero { padding: 50px 0 35px; }
 
       .idea-grid {
         grid-template-columns: 1fr;
         margin-bottom: 40px;
       }
 
-      .form-card {
-        border-radius: 14px;
-      }
+      .form-card { border-radius: 14px; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- PROGRESSION -->
   <div class="progress-wrapper">
     <div class="container">
       <div class="progress-info">
         <span id="progressText">0 % complété</span>
         <span>15 questions</span>
       </div>
-
       <div class="progress-bar">
         <div class="progress-fill" id="progressFill"></div>
       </div>
     </div>
   </div>
 
-  <!-- INTRODUCTION -->
   <header class="hero">
     <div class="container">
-
       <span class="eyebrow">Bienne / Biel & alentours</span>
 
-      <h1>
-        Et si on fabriquait quelque chose ensemble ?
-      </h1>
+      <h1>Et si on fabriquait quelque chose ensemble ?</h1>
 
       <p class="hero-intro">
         Tu as déjà eu une idée en te disant :
@@ -394,16 +325,12 @@
         Je cherche des personnes curieuses, créatives et motivées
         pour imaginer, fabriquer et expérimenter des projets un peu inhabituels.
       </p>
-
     </div>
   </header>
 
-
-  <!-- EXEMPLES -->
   <main class="container">
 
     <div class="idea-grid">
-
       <div class="idea">🎭 Théâtre & spectacles</div>
       <div class="idea">🎧 Expériences immersives</div>
       <div class="idea">🎮 Gaming & événements</div>
@@ -412,36 +339,18 @@
       <div class="idea">💡 Technologie & objets interactifs</div>
       <div class="idea">🎨 Art & design</div>
       <div class="idea">🎪 Projets complètement improbables</div>
-
     </div>
 
-
-    <!-- FORMULAIRE -->
     <section class="form-card">
 
       <div class="form-header">
-
         <h2>Quelques questions</h2>
-
         <p>
           Il n'y a pas de bonne réponse.
           Je cherche surtout à comprendre qui pourrait avoir envie
           de construire quelque chose avec d'autres.
         </p>
-
       </div>
-
-
-      <!--
-        NETLIFY FORMS
-
-        IMPORTANT :
-        data-netlify="true"
-        name="creative-network"
-
-        permettent à Netlify de détecter automatiquement
-        le formulaire lors du déploiement.
-      -->
 
       <form
         name="creative-network"
@@ -451,10 +360,8 @@
         id="creativeForm"
       >
 
-        <!-- NETLIFY -->
         <input type="hidden" name="form-name" value="creative-network">
 
-        <!-- HONEYPOT ANTI-SPAM -->
         <p style="display:none;">
           <label>
             Ne pas remplir :
@@ -462,362 +369,323 @@
           </label>
         </p>
 
-
-        <!-- 1 -->
         <div class="question">
-
           <span class="question-number">01</span>
-
           <label class="question-title" for="name">
             Comment souhaites-tu être appelé·e ?
           </label>
-
-          <input
-            type="text"
-            id="name"
-            name="name"
-            autocomplete="given-name"
-            required
-          >
-
+          <input type="text" id="name" name="name" autocomplete="given-name" required>
         </div>
 
-
-        <!-- 2 -->
         <div class="question">
-
           <span class="question-number">02</span>
-
           <label class="question-title" for="contact">
             Comment puis-je te contacter ?
           </label>
-
-          <p class="hint">
-            E-mail ou numéro de téléphone.
-          </p>
-
-          <input
-            type="text"
-            id="contact"
-            name="contact"
-            required
-          >
-
+          <p class="hint">E-mail ou numéro de téléphone.</p>
+          <input type="text" id="contact" name="contact" required>
         </div>
 
-
-        <!-- 3 -->
         <div class="question">
-
           <span class="question-number">03</span>
-
-          <label class="question-title">
-            Dans quelle tranche d'âge te situes-tu ?
-          </label>
+          <label class="question-title">Dans quelle tranche d'âge te situes-tu ?</label>
 
           <div class="options">
-
-            <div class="option">
-              <input type="radio" id="age1" name="age" value="moins-de-18">
-              <label for="age1">Moins de 18 ans</label>
-            </div>
-
-            <div class="option">
-              <input type="radio" id="age2" name="age" value="18-24">
-              <label for="age2">18–24</label>
-            </div>
-
-            <div class="option">
-              <input type="radio" id="age3" name="age" value="25-34">
-              <label for="age3">25–34</label>
-            </div>
-
-            <div class="option">
-              <input type="radio" id="age4" name="age" value="35-44">
-              <label for="age4">35–44</label>
-            </div>
-
-            <div class="option">
-              <input type="radio" id="age5" name="age" value="45-54">
-              <label for="age5">45–54</label>
-            </div>
-
-            <div class="option">
-              <input type="radio" id="age6" name="age" value="55-64">
-              <label for="age6">55–64</label>
-            </div>
-
-            <div class="option">
-              <input type="radio" id="age7" name="age" value="65-plus">
-              <label for="age7">65 ans ou plus</label>
-            </div>
-
-            <div class="option">
-              <input type="radio" id="age8" name="age" value="prefer-not">
-              <label for="age8">Je préfère ne pas répondre</label>
-            </div>
-
+            <div class="option"><input type="radio" id="age1" name="age" value="moins-de-18"><label for="age1">Moins de 18 ans</label></div>
+            <div class="option"><input type="radio" id="age2" name="age" value="18-24"><label for="age2">18–24</label></div>
+            <div class="option"><input type="radio" id="age3" name="age" value="25-34"><label for="age3">25–34</label></div>
+            <div class="option"><input type="radio" id="age4" name="age" value="35-44"><label for="age4">35–44</label></div>
+            <div class="option"><input type="radio" id="age5" name="age" value="45-54"><label for="age5">45–54</label></div>
+            <div class="option"><input type="radio" id="age6" name="age" value="55-64"><label for="age6">55–64</label></div>
+            <div class="option"><input type="radio" id="age7" name="age" value="65-plus"><label for="age7">65 ans ou plus</label></div>
+            <div class="option"><input type="radio" id="age8" name="age" value="prefer-not"><label for="age8">Je préfère ne pas répondre</label></div>
           </div>
-
         </div>
 
-
-        <!-- 4 -->
         <div class="question">
-
           <span class="question-number">04</span>
-
-          <label class="question-title">
-            Où es-tu principalement basé·e ?
-          </label>
+          <label class="question-title">Où es-tu principalement basé·e ?</label>
 
           <div class="options">
-
-            <div class="option">
-              <input type="radio" id="place1" name="location" value="bienne">
-              <label for="place1">Bienne / Biel</label>
-            </div>
-
-            <div class="option">
-              <input type="radio" id="place2" name="location" value="seeland">
-              <label for="place2">Seeland</label>
-            </div>
-
-            <div class="option">
-              <input type="radio" id="place3" name="location" value="jura-bernois">
-              <label for="place3">Jura bernois</label>
-            </div>
-
-            <div class="option">
-              <input type="radio" id="place4" name="location" value="jura">
-              <label for="place4">Jura</label>
-            </div>
-
-            <div class="option">
-              <input type="radio" id="place5" name="location" value="neuchatel">
-              <label for="place5">Neuchâtel</label>
-            </div>
-
-            <div class="option">
-              <input type="radio" id="place6" name="location" value="berne">
-              <label for="place6">Berne</label>
-            </div>
-
-            <div class="option">
-              <input type="radio" id="place7" name="location" value="autre">
-              <label for="place7">Autre région</label>
-            </div>
-
+            <div class="option"><input type="radio" id="place1" name="location" value="bienne"><label for="place1">Bienne / Biel</label></div>
+            <div class="option"><input type="radio" id="place2" name="location" value="seeland"><label for="place2">Seeland</label></div>
+            <div class="option"><input type="radio" id="place3" name="location" value="jura-bernois"><label for="place3">Jura bernois</label></div>
+            <div class="option"><input type="radio" id="place4" name="location" value="jura"><label for="place4">Jura</label></div>
+            <div class="option"><input type="radio" id="place5" name="location" value="neuchatel"><label for="place5">Neuchâtel</label></div>
+            <div class="option"><input type="radio" id="place6" name="location" value="berne"><label for="place6">Berne</label></div>
+            <div class="option"><input type="radio" id="place7" name="location" value="autre"><label for="place7">Autre région</label></div>
           </div>
-
         </div>
 
-
-        <!-- 5 -->
         <div class="question">
-
           <span class="question-number">05</span>
-
           <label class="question-title">
             Dans quelle(s) langue(s) serais-tu à l'aise pour participer à un projet ?
           </label>
 
           <div class="options">
-
-            <div class="option">
-              <input type="checkbox" id="lang1" name="languages" value="francais">
-              <label for="lang1">Français</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="lang2" name="languages" value="deutsch">
-              <label for="lang2">Deutsch</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="lang3" name="languages" value="english">
-              <label for="lang3">English</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="lang4" name="languages" value="autre">
-              <label for="lang4">Autre</label>
-            </div>
-
+            <div class="option"><input type="checkbox" id="lang1" name="languages" value="francais"><label for="lang1">Français</label></div>
+            <div class="option"><input type="checkbox" id="lang2" name="languages" value="deutsch"><label for="lang2">Deutsch</label></div>
+            <div class="option"><input type="checkbox" id="lang3" name="languages" value="english"><label for="lang3">English</label></div>
+            <div class="option"><input type="checkbox" id="lang4" name="languages" value="autre"><label for="lang4">Autre</label></div>
           </div>
-
         </div>
 
-
-        <!-- 6 -->
         <div class="question">
-
           <span class="question-number">06</span>
-
-          <label class="question-title">
-            Parmi ces domaines, lesquels t'attirent ?
-          </label>
-
-          <p class="hint">
-            Plusieurs réponses possibles.
-          </p>
+          <label class="question-title">Parmi ces domaines, lesquels t'attirent ?</label>
+          <p class="hint">Plusieurs réponses possibles.</p>
 
           <div class="options">
-
-            <div class="option">
-              <input type="checkbox" id="interest1" name="interests" value="theatre">
-              <label for="interest1">🎭 Théâtre / spectacle</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="interest2" name="interests" value="evenementiel">
-              <label for="interest2">🎪 Événementiel</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="interest3" name="interests" value="immersif">
-              <label for="interest3">🎧 Expériences immersives</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="interest4" name="interests" value="arts">
-              <label for="interest4">🎨 Arts visuels / illustration / design</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="interest5" name="interests" value="musique">
-              <label for="interest5">🎵 Musique / son</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="interest6" name="interests" value="video">
-              <label for="interest6">🎬 Vidéo / photographie</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="interest7" name="interests" value="lecture">
-              <label for="interest7">📚 Lecture / écriture / narration</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="interest8" name="interests" value="gaming">
-              <label for="interest8">🎮 Jeux vidéo / gaming</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="interest9" name="interests" value="jeux">
-              <label for="interest9">🎲 Jeux de société / jeux de rôle</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="interest10" name="interests" value="construction">
-              <label for="interest10">🧱 Bricolage / construction / fabrication</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="interest11" name="interests" value="mecanique">
-              <label for="interest11">⚙️ Mécanique</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="interest12" name="interests" value="electronique">
-              <label for="interest12">💡 Électronique / Arduino / objets interactifs</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="interest13" name="interests" value="fabrication-numerique">
-              <label for="interest13">🖨️ Fabrication numérique / 3D</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="interest14" name="interests" value="informatique">
-              <label for="interest14">💻 Informatique / développement</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="interest15" name="interests" value="science">
-              <label for="interest15">🧪 Sciences / expériences</label>
-            </div>
-
-            <div class="option">
-              <input type="checkbox" id="interest16" name="interests" value="nature">
-              <label for="interest16">🌱 Nature / environnement</label>
-            </div>
-
+            <div class="option"><input type="checkbox" id="interest1" name="interests" value="theatre"><label for="interest1">🎭 Théâtre / spectacle</label></div>
+            <div class="option"><input type="checkbox" id="interest2" name="interests" value="evenementiel"><label for="interest2">🎪 Événementiel</label></div>
+            <div class="option"><input type="checkbox" id="interest3" name="interests" value="immersif"><label for="interest3">🎧 Expériences immersives</label></div>
+            <div class="option"><input type="checkbox" id="interest4" name="interests" value="arts"><label for="interest4">🎨 Arts visuels / illustration / design</label></div>
+            <div class="option"><input type="checkbox" id="interest5" name="interests" value="musique"><label for="interest5">🎵 Musique / son</label></div>
+            <div class="option"><input type="checkbox" id="interest6" name="interests" value="video"><label for="interest6">🎬 Vidéo / photographie</label></div>
+            <div class="option"><input type="checkbox" id="interest7" name="interests" value="lecture"><label for="interest7">📚 Lecture / écriture / narration</label></div>
+            <div class="option"><input type="checkbox" id="interest8" name="interests" value="gaming"><label for="interest8">🎮 Jeux vidéo / gaming</label></div>
+            <div class="option"><input type="checkbox" id="interest9" name="interests" value="jeux"><label for="interest9">🎲 Jeux de société / jeux de rôle</label></div>
+            <div class="option"><input type="checkbox" id="interest10" name="interests" value="construction"><label for="interest10">🧱 Bricolage / construction / fabrication</label></div>
+            <div class="option"><input type="checkbox" id="interest11" name="interests" value="mecanique"><label for="interest11">⚙️ Mécanique</label></div>
+            <div class="option"><input type="checkbox" id="interest12" name="interests" value="electronique"><label for="interest12">💡 Électronique / Arduino / objets interactifs</label></div>
+            <div class="option"><input type="checkbox" id="interest13" name="interests" value="fabrication-numerique"><label for="interest13">🖨️ Fabrication numérique / 3D</label></div>
+            <div class="option"><input type="checkbox" id="interest14" name="interests" value="informatique"><label for="interest14">💻 Informatique / développement</label></div>
+            <div class="option"><input type="checkbox" id="interest15" name="interests" value="science"><label for="interest15">🧪 Sciences / expériences</label></div>
+            <div class="option"><input type="checkbox" id="interest16" name="interests" value="nature"><label for="interest16">🌱 Nature / environnement</label></div>
           </div>
-
         </div>
 
-
-        <!-- 7 -->
         <div class="question">
-
           <span class="question-number">07</span>
-
-          <label class="question-title" for="skills">
-            Qu'est-ce que tu sais particulièrement bien faire ?
-          </label>
-
-          <p class="hint">
-            Une compétence professionnelle ou simplement quelque chose que tu fais par passion.
-          </p>
-
-          <textarea
-            id="skills"
-            name="skills"
-            placeholder="Je sais construire..., organiser..., dessiner..., programmer..."
-            required
-          ></textarea>
-
+          <label class="question-title" for="skills">Qu'est-ce que tu sais particulièrement bien faire ?</label>
+          <p class="hint">Une compétence professionnelle ou simplement quelque chose que tu fais par passion.</p>
+          <textarea id="skills" name="skills" placeholder="Je sais construire..., organiser..., dessiner..., programmer..." required></textarea>
         </div>
 
-
-        <!-- 8 -->
         <div class="question">
-
           <span class="question-number">08</span>
-
-          <label class="question-title" for="learning">
-            Qu'aimerais-tu apprendre ou essayer ?
-          </label>
-
-          <textarea
-            id="learning"
-            name="learning"
-            placeholder="J'aimerais apprendre à..."
-          ></textarea>
-
+          <label class="question-title" for="learning">Qu'aimerais-tu apprendre ou essayer ?</label>
+          <textarea id="learning" name="learning" placeholder="J'aimerais apprendre à..."></textarea>
         </div>
 
-
-        <!-- 9 -->
         <div class="question">
-
           <span class="question-number">09</span>
-
           <label class="question-title" for="last-project">
             Quel est le dernier projet que tu as réellement réalisé, fabriqué ou organisé ?
           </label>
-
           <p class="hint">
             Petit ou grand. Professionnel ou personnel.
             Nous cherchons surtout à comprendre comment tu passes d'une idée à quelque chose de concret.
           </p>
-
-          <textarea
-            id="last-project"
-            name="last-project"
-            required
-          ></textarea>
-
+          <textarea id="last-project" name="last-project" required></textarea>
         </div>
 
-
-        <!-- 10 -->
         <div class="question">
-
           <span class="question-number">10</span>
+          <label class="question-title" for="current-idea">As-tu actuellement une idée que tu aimerais vraiment réaliser ?</label>
+          <p class="hint">Sérieuse, absurde, ambitieuse, minuscule ou complètement floue.</p>
+          <textarea id="current-idea" name="current-idea"></textarea>
+        </div>
 
-          <label class="question-title" for="current-idea">
-            As-tu actuellement une idée que tu aimerais vraiment réaliser ?
+        <div class="question">
+          <span class="question-number">11</span>
+          <label class="question-title" for="crazy-idea">
+            Y a-t-il quelque chose que tu aimerais faire mais que tu trouves trop bizarre,
+            trop ambitieux ou trop compliqué pour réaliser seul·e ?
           </label>
+          <textarea id="crazy-idea" name="crazy-idea" placeholder="Ça pourrait être complètement improbable..."></textarea>
+        </div>
+
+        <div class="question">
+          <span class="question-number">12</span>
+          <label class="question-title">Quelle place prends-tu généralement dans un projet collectif ?</label>
+          <p class="hint">Plusieurs réponses possibles.</p>
+
+          <div class="options">
+            <div class="option"><input type="checkbox" id="role1" name="roles" value="ideas"><label for="role1">💡 Je trouve les idées</label></div>
+            <div class="option"><input type="checkbox" id="role2" name="roles" value="build"><label for="role2">🛠️ Je fabrique / construis</label></div>
+            <div class="option"><input type="checkbox" id="role3" name="roles" value="visual"><label for="role3">🎨 Je crée l'aspect visuel</label></div>
+            <div class="option"><input type="checkbox" id="role4" name="roles" value="problem-solving"><label for="role4">🧠 Je réfléchis et résous les problèmes</label></div>
+            <div class="option"><input type="checkbox" id="role5" name="roles" value="organize"><label for="role5">📋 J'organise</label></div>
+            <div class="option"><input type="checkbox" id="role6" name="roles" value="communication"><label for="role6">🗣️ Je communique / présente</label></div>
+            <div class="option"><input type="checkbox" id="role7" name="roles" value="technical"><label for="role7">💻 Je m'occupe de la partie technique</label></div>
+            <div class="option"><input type="checkbox" id="role8" name="roles" value="people"><label for="role8">🤝 Je rassemble les gens</label></div>
+            <div class="option"><input type="checkbox" id="role9" name="roles" value="drive"><label for="role9">🚀 Je lance les choses et pousse le projet à avancer</label></div>
+            <div class="option"><input type="checkbox" id="role10" name="roles" value="help"><label for="role10">🔧 Je préfère aider là où il y a besoin</label></div>
+            <div class="option"><input type="checkbox" id="role11" name="roles" value="unknown"><label for="role11">🤷 Je ne sais pas encore</label></div>
+          </div>
+        </div>
+
+        <div class="question">
+          <span class="question-number">13</span>
+          <label class="question-title">Combien de temps pourrais-tu raisonnablement consacrer à un projet collectif ?</label>
+
+          <div class="options">
+            <div class="option"><input type="radio" id="time1" name="time" value="1-2"><label for="time1">1–2 heures par mois</label></div>
+            <div class="option"><input type="radio" id="time2" name="time" value="2-5"><label for="time2">2–5 heures par mois</label></div>
+            <div class="option"><input type="radio" id="time3" name="time" value="5-10"><label for="time3">5–10 heures par mois</label></div>
+            <div class="option"><input type="radio" id="time4" name="time" value="10-plus"><label for="time4">10 heures ou plus par mois</label></div>
+            <div class="option"><input type="radio" id="time5" name="time" value="depends"><label for="time5">Cela dépend fortement du projet</label></div>
+          </div>
+        </div>
+
+        <div class="question">
+          <span class="question-number">14</span>
+          <label class="question-title">
+            Imagine qu'on te propose demain de participer à un petit projet avec 3 ou 4 personnes inconnues.
+            Le projet doit être réalisé en 30 jours avec un budget maximum de 200 CHF.
+          </label>
+
+          <div class="options">
+            <div class="option"><input type="radio" id="reaction1" name="reaction" value="lets-go"><label for="reaction1">🚀 « Absolument. Quand est-ce qu'on commence ? »</label></div>
+            <div class="option"><input type="radio" id="reaction2" name="reaction" value="maybe"><label for="reaction2">« Pourquoi pas, si l'idée m'intéresse. »</label></div>
+            <div class="option"><input type="radio" id="reaction3" name="reaction" value="need-info"><label for="reaction3">« J'aurais besoin d'en savoir beaucoup plus avant de m'engager. »</label></div>
+            <div class="option"><input type="radio" id="reaction4" name="reaction" value="longer"><label for="reaction4">« Ça m'intéresse mais je préfère les projets plus longs. »</label></div>
+            <div class="option"><input type="radio" id="reaction5" name="reaction" value="not-for-me"><label for="reaction5">« Ce n'est probablement pas pour moi. »</label></div>
+          </div>
+        </div>
+
+        <div class="question">
+          <span class="question-number">15</span>
+          <label class="question-title" for="dream-project">Une dernière chose…</label>
+          <p class="hint">
+            Si tu pouvais réunir 3 personnes possédant exactement les compétences dont tu as besoin,
+            qu'aimerais-tu essayer de créer avec elles ?
+          </p>
+          <textarea id="dream-project" name="dream-project" placeholder="Je réunirais quelqu'un qui sait..., quelqu'un qui..., et nous ferions..."></textarea>
+        </div>
+
+        <div class="privacy">
+          <strong>À propos de tes données</strong>
+
+          <p>
+            Les informations fournies dans ce formulaire sont utilisées uniquement
+            pour comprendre les profils des personnes intéressées et, lorsque cela
+            est pertinent, les contacter dans le cadre de rencontres ou de projets
+            créatifs et collectifs.
+          </p>
+
+          <p>
+            Elles ne sont pas vendues et ne sont pas utilisées à des fins de
+            prospection commerciale sans accord séparé.
+          </p>
+
+          <p>
+            Tu peux demander l'accès, la rectification ou la suppression de tes
+            données à tout moment en contactant :
+            <strong>[TON ADRESSE E-MAIL]</strong>
+          </p>
+
+          <p>
+            Responsable du traitement :
+            <strong>[TON NOM / NOM DU COLLECTIF]</strong>
+          </p>
+
+          <p>
+            En envoyant ce formulaire, tu confirmes avoir pris connaissance
+            de ces informations.
+          </p>
+        </div>
+
+        <div class="submit-area">
+          <button type="submit">
+            Je veux rencontrer d'autres cerveaux créatifs →
+          </button>
+
+          <p class="submit-note">
+            Environ 5 minutes. Aucune obligation de rejoindre un projet.
+          </p>
+        </div>
+
+      </form>
+
+      <div class="success" id="successMessage">
+        <div class="success-icon">🛠️</div>
+        <h2>C'est envoyé.</h2>
+        <p>
+          Merci pour tes réponses.
+          Si ton profil semble correspondre à l'esprit de la démarche,
+          je te contacterai pour faire connaissance.
+        </p>
+        <p>
+          Et peut-être qu'un jour, quelqu'un dira :
+          <strong>« Bon. On essaie ? »</strong>
+        </p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    Bienne / Biel · Création · Expérimentation · Projets collectifs
+  </footer>
+
+  <script>
+    const form = document.getElementById("creativeForm");
+    const progressFill = document.getElementById("progressFill");
+    const progressText = document.getElementById("progressText");
+
+    function updateProgress() {
+      const questions = document.querySelectorAll(".question");
+      let completed = 0;
+
+      questions.forEach(question => {
+        const inputs = question.querySelectorAll(
+          "input[type='text'], input[type='email'], input[type='tel'], textarea, select"
+        );
+        const radios = question.querySelectorAll("input[type='radio']");
+        const checkboxes = question.querySelectorAll("input[type='checkbox']");
+
+        let filled = false;
+
+        inputs.forEach(input => {
+          if (input.value.trim() !== "") filled = true;
+        });
+
+        if ([...radios].some(radio => radio.checked)) filled = true;
+        if ([...checkboxes].some(checkbox => checkbox.checked)) filled = true;
+
+        if (filled) completed++;
+      });
+
+      const percentage = Math.round((completed / questions.length) * 100);
+
+      progressFill.style.width = percentage + "%";
+      progressText.textContent = percentage + " % complété";
+    }
+
+    form.addEventListener("input", updateProgress);
+    form.addEventListener("change", updateProgress);
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: new URLSearchParams(formData).toString()
+      })
+      .then(() => {
+        form.style.display = "none";
+        document.getElementById("successMessage").style.display = "block";
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      })
+      .catch(() => {
+        alert(
+          "Une erreur est survenue lors de l'envoi. Merci de réessayer."
+        );
+      });
+    });
+  </script>
+
+</body>
+</html>
