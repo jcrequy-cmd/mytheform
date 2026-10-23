@@ -75,12 +75,12 @@
     h1 {
       max-width: 700px;
       margin: 0 auto 40px;
-      font-family: "Chalkboard SE", "Comic Sans MS", "Bradley Hand", cursive; /*Police*/
+      font-family: ui-rounded, "Avenir Next", "Segoe UI", system-ui, sans-serif; /*Police*/
 	font-size: clamp(2.1rem, 7vw, 4.2rem);
       font-weight: 800; /*????*/
 	line-height: 0.98;
       letter-spacing: -0.045em;
-	animation: titleColors 8s ease-in-out infinite;
+	animation: titleColors 30s ease-in-out infinite;
     }
 
     @keyframes titleColors {
@@ -95,7 +95,8 @@
 
     <!-- STYLE TEXTE DE PRESENTATION 
     -->
-    .hero-intro {
+    .hero-intro,
+    .hero-image {
       max-width: 620px;
       margin: 0 auto;
       color: var(--muted);
@@ -109,6 +110,18 @@
     }
     
     .hero-intro strong { color: var(--text); }
+
+    .hero-image {
+  	margin: 2rem auto 0;
+    }
+
+    .hero-image img {
+  	display: block;
+ 	 width: 100%;
+ 	 height: auto;
+ 	 border-radius: 30px;
+  	box-shadow: 0 0px 0px rgba(0, 0, 0, 0.10);
+    }
 
 
     .idea-grid {
@@ -126,6 +139,7 @@
       font-size: 0.95rem;
     }
 
+	/* FORMAT CLASSIQUE SANS BOUTON "PARTICIPER !"
     .form-card {
       padding: clamp(22px, 5vw, 42px);
       background: var(--card);
@@ -133,6 +147,33 @@
       border-radius: var(--radius);
       box-shadow: 0 15px 45px rgba(0, 0, 0, 0.05);
     }
+	*/
+
+
+	/* MODIF 1 POUR AJOUTER BOUTON "PARTICIPER !"*/
+    .form-card {
+  	display: none;
+ 	padding: clamp(22px, 5vw, 42px);
+  	background: var(--card);
+  	border: 1px solid var(--border);
+ 	border-radius: var(--radius);
+  	box-shadow: 0 15px 45px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-card.is-visible {
+  	display: block;
+    }
+
+    .participate-area {
+ 	margin: 10px 0 35px;
+  	text-align: center;
+    }
+
+    .participate-button {
+  	width: auto;
+  	padding: 16px 30px;
+    }
+
 
     .form-header { margin-bottom: 35px; }
 
@@ -143,8 +184,12 @@
     }
 
     .form-header p {
-      margin: 0;
-      color: var(--muted);
+  	margin: 0 0 1rem;
+ 	color: var(--muted);
+    }
+
+    .form-header p:last-child {
+ 	margin-bottom: 0;
     }
 
     .question { margin-bottom: 32px; }
@@ -332,59 +377,93 @@
     </div>
   </div>
 
+
   <header class="hero">
     <div class="container">
+	<!--
       <span class="eyebrow">Bienne / Biel & alentours</span>
-      <h1>Et si on créait quelque chose ensemble ?</h1>
+	<h1>Et si on créait quelque chose ensemble ?</h1>
+	-->
+
+    <div class="hero-image">
+  	<img
+    	src="images/TitreD.png"
+    	alt="Illustration représentant la création de projets collectifs"
+    >
+    </div>
 
       <p class="hero-intro">
-        Tu as déjà eu une idée en te disant :
-        <strong>« Ce serait génial de faire ça… »</strong>
-        sans jamais savoir avec qui la réaliser ?
+        Tu as déjà voulu réaliser une idée un peu folle au point d'en perdre le sommeil ? Penses-tu avoir un potentiel créatif inexploité ? As-tu un savoir-faire ou une passion que tu aimerais mettre à contribution sans savoir avec qui, ni comment ?
       </p>
 
-       <p class="hero-intro">
-      Je cherche des personnes curieuses, créatives et motivées pour imaginer,
-      fabriquer et expérimenter des projets originaux, sur Bienne et au-delà.
+  <p class="hero-intro">
+      C'est en tout cas une situation que je connais bien !
     </p>
-    
+   
     <p class="hero-intro">
-      Idéalement, j'aimerais faire naître un réseau local de personnes qui ont des
-      savoir-faire ou simplement l'envie de créer : un endroit où une idée lancée
-      par quelqu'un peut devenir un projet collectif grâce aux talents de chacun !
+      <strong>Rejoins-moi pour créer un réseau d'entraide local où chacun peut contribuer aux projets des autres et transformer ses idées en projets concrets !
+        </strong> </p>
+
+    <p class="hero-intro">
+      Si cette petite intro te parle, commence par remplir ce formulaire et je te contacterai.
     </p>
+
     <!--
     <p class="hero-intro">
-      Si cette idée te parle, je t'invite à remplir ce formulaire.
-    </p>
-    -->
+        <strong> [IMAGE FRESQUE TYPES DE PROJET]</strong>
+      </p>
+    --> 
+
+    <div class="hero-image">
+  	<img
+    	src="images/fresque11.png"
+    	alt="Illustration représentant la création de projets collectifs"
+    >
+    </div>
+
     </div>
   </header>
 
-
   <main class="container">
-    <!-- PAS DE HEADER BLING-BLING
+    <!-- PAS DE HEADER BLING-BLING  
     <div class="idea-grid">
-      <div class="idea">🎭 Théâtre & spectacles</div>
-      <div class="idea">🎧 Expériences immersives</div>
-      <div class="idea">🎮 Gaming & événements</div>
-      <div class="idea">🧱 Construction & fabrication</div>
-      <div class="idea">📚 Lecture & narration</div>
-      <div class="idea">💡 Technologie & objets interactifs</div>
-      <div class="idea">🎨 Art & design</div>
+      <div class="idea">🎪 Événementiel</div>
+      <div class="idea">🎞️ Vidéo / animation</div>
+      <div class="idea">🎭 Théâtre</div>
+	<div class="idea">🕺 Danse</div>
+ 	<div class="idea">🎵 Musique</div>
+      <div class="idea">⚙️ Fabrication / conception</div>
+      <div class="idea">🎨 Arts visuels / illustration  </div>
       <div class="idea">🎪 Projets complètement improbables</div>
     </div>
-    -->
-  
-    <section class="form-card">
+   -->
+
+	<!-- MODIF 2 POUR AJOUTER BOUTON -->
+    <div class="participate-area" id="participateArea">
+      <button type="button" class="participate-button" id="participateButton">
+        Je participe !
+      </button>
+    </div>
+
+ 
+	<!-- MODIF 3 POUR AJOUTER BOUTON -->
+    <section class="form-card" id="questionForm">
       <div class="form-header">
         <h2>Quelques questions</h2>
         <p>
-          Il n'y a pas de bonne réponse. J'ai pensé qu'un formulaire t'aiderait à mieux comprendre l'objectif et 
-nous aiderait à entamer la discussion si nous devions nous rencontrer. Surtout, je trouvais ça plus sympa & efficace qu'une
-simple affiche avec mon contact. J'espère que cela t'emballera !
+	Relax ! Il n’y a pas de bonne ou de mauvaise réponse. Les questions sont volontairement
+  	générales et ne portent pas sur des éléments intimes ou sensibles de ta vie privée.
         </p>
-      </div>
+
+        <p>
+	Ce formulaire devrait simplement te permettre de mieux comprendre la démarche 
+ 	et devrait nous donner quelques pistes pour orienter une première discussion. 
+        </p>
+
+	 <p>
+	<strong>En résumé, il s’agit d’une première étape, sans engagement, avant de faire connaissance.</strong>
+	 </p>
+          </div>
 
       <form
         name="creative-network"
@@ -415,13 +494,15 @@ simple affiche avec mon contact. J'espère que cela t'emballera !
             <div class="option"><input type="checkbox" id="interest8" name="interests" value="experiences-immersives"><label for="interest8">🎧 Expériences immersives</label></div>
             <div class="option"><input type="checkbox" id="interest9" name="interests" value="gaming"><label for="interest9">🎮 Jeux vidéo / gaming</label></div>
             <div class="option"><input type="checkbox" id="interest10" name="interests" value="jeux-societe-jdr"><label for="interest10">🎲 Jeux de société / jeux de rôle</label></div>
-            <div class="option"><input type="checkbox" id="interest11" name="interests" value="fabrication-numerique"><label for="interest11">⚙️ Conception / fabrication / bricolage </label></div>            
-		<div class="option"><input type="checkbox" id="interest12" name="interests" value="electronique"><label for="interest12">💡 Électronique / Arduino / objets interactifs</label></div>
-            <div class="option"><input type="checkbox" id="interest13" name="interests" value="informatique"><label for="interest13">💻 Informatique / développement</label></div>
-            <div class="option"><input type="checkbox" id="interest14" name="interests" value="science"><label for="interest14">🧪 Sciences / expériences</label></div>
-            <div class="option"><input type="checkbox" id="interest15" name="interests" value="nature"><label for="interest15">🌱 Nature / Faune / Flore </label></div>
-            <div class="option"><input type="checkbox" id="interest16" name="interests" value="nature"><label for="interest16">🏦Politique </label></div>
-            <div class="option"><input type="checkbox" id="interest17" name="interests" value="nature"><label for="interest17">❓ Autre(s)</label></div>
+            <div class="option"><input type="checkbox" id="interest11" name="interests" value="nature"><label for="interest11">✂️ Loisirs créatifs </label></div>
+            <div class="option"><input type="checkbox" id="interest12" name="interests" value="fabrication-numerique"><label for="interest12">⚙️ Conception / fabrication / bricolage </label></div>            
+		<div class="option"><input type="checkbox" id="interest13" name="interests" value="electronique"><label for="interest13">💡 Électronique / Arduino / objets interactifs</label></div>
+            <div class="option"><input type="checkbox" id="interest14" name="interests" value="informatique"><label for="interest14">💻 Informatique / développement</label></div>
+            <div class="option"><input type="checkbox" id="interest15" name="interests" value="science"><label for="interest15">🧪 Sciences / expériences</label></div>
+            <div class="option"><input type="checkbox" id="interest16" name="interests" value="nature"><label for="interest16">🌱 Nature / Faune / Flore </label></div>
+		<div class="option"><input type="checkbox" id="interest17" name="interests" value="nature"><label for="interest17">🧙‍♂️ Association / aide à la personne </label></div>
+            <div class="option"><input type="checkbox" id="interest18" name="interests" value="nature"><label for="interest18">🏦Politique </label></div>
+            <div class="option"><input type="checkbox" id="interest19" name="interests" value="nature"><label for="interest19">❓ Autre(s)</label></div>
           </div>
         </div>
 
@@ -436,20 +517,20 @@ simple affiche avec mon contact. J'espère que cela t'emballera !
 
         <div class="question">
           <span class="question-number">03</span>
-          <label class="question-title" for="last-project">Quel est le dernier truc que tu as organisé, construit, créé ou auquel tu as participé ?</label>
-          <textarea id="last-project" name="last-project" required></textarea>
+          <label class="question-title" for="last-project">Si oui, peux-tu m'en dire plus ? Quel est le dernier truc que tu as organisé, construit, créé ou auquel tu as participé ?</label>
+          <textarea id="last-project" name="last-project" placeholder="J'ai organisé un concert, j'ai construit une machine, j'ai participé à une pièce de théâtre, etc."></textarea>
         </div>
 
         <div class="question">
           <span class="question-number">04</span>
-          <label class="question-title" for="dream-project">Quel projet aimerais-tu réaliser si tu avais les bonnes personnes autour de toi ?</label>
-          <textarea id="dream-project" name="dream-project"></textarea>
+          <label class="question-title" for="dream-project">Et sinon, quel projet aimerais-tu réaliser si tu avais les bonnes personnes autour de toi ?</label>
+          <textarea id="dream-project" name="dream-project" placeholder="J'aimerais organiser un concert, construire une machine, monter une pièce de théâtre, etc."></textarea>
         </div>
 
         <div class="question">
           <span class="question-number">05</span>
           <label class="question-title" for="motivation">Y a-t-il quelque chose d’indispensable pour te motiver à aller au bout d’un projet ?</label>
-          <textarea id="motivation" name="motivation" placeholder="Par exemple : une équipe motivée, un cadre clair, du temps, un objectif concret…"></textarea>
+          <textarea id="motivation" name="motivation" placeholder="Une équipe motivée, un cadre clair, du temps, un objectif concret, etc."></textarea>
         </div>
 
         <div class="question">
@@ -462,20 +543,20 @@ simple affiche avec mon contact. J'espère que cela t'emballera !
             <div class="option"><input type="radio" id="profile4" name="profile" value="transforme-idee-en-plan"><label for="profile4">🧠 Je suis plutôt celui ou celle qui transforme une idée en plan</label></div>
             <div class="option"><input type="radio" id="profile5" name="profile" value="artiste-creatif"><label for="profile5">🎨 Je suis plutôt artiste / créatif·ve</label></div>
             <div class="option"><input type="radio" id="profile6" name="profile" value="technique"><label for="profile6">💻 Je suis plutôt technique</label></div>
-            <div class="option"><input type="radio" id="profile7" name="profile" value="envie-dessayer"><label for="profile7">✨ Je ne sais pas répondre, mais j’ai envie d’essayer</label></div>
+            <div class="option"><input type="radio" id="profile7" name="profile" value="envie-dessayer"><label for="profile7">✨ Je ne sais pas répondre, mais j’ai envie de le découvrir</label></div>
           </div>
         </div>
 
         <div class="question">
           <span class="question-number">07</span>
           <label class="question-title" for="skills">Qu’est-ce que tu sais particulièrement bien faire ? Pratiques-tu, ou as-tu pratiqué, une activité que tu aimerais mettre à contribution ?</label>
-          <textarea id="skills" name="skills" placeholder="Je sais construire…, organiser…, dessiner…, programmer…" required></textarea>
+          <textarea id="skills" name="skills" placeholder="Je sais programmer, organiser, dessiner, jouer d'un instrument, casser un miroir avec ma tête sans me couper, etc." required></textarea>
         </div>
 
         <div class="question">
           <span class="question-number">08</span>
-          <label class="question-title" for="learning">Qu’aimerais-tu apprendre ou essayer ?</label>
-          <textarea id="learning" name="learning" placeholder="J’aimerais apprendre à…"></textarea>
+          <label class="question-title" for="learning">Qu’aimerais-tu apprendre ou essayer au cours d'un projet ?</label>
+          <textarea id="learning" name="learning" placeholder="J’aimerais apprendre à gérer un projet, m'occuper d'un budget, démarcher des sponsors, faire la régie son & lumière d'un spectacle, casser un miroir avec ma tête sans me couper, etc."></textarea>
         </div>
 
         <div class="question">
@@ -512,9 +593,9 @@ simple affiche avec mon contact. J'espère que cela t'emballera !
 
         <div class="question">
           <span class="question-number">11</span>
-          <label class="question-title" for="contact">Comment peut-on te contacter ?</label>
+          <label class="question-title" for="contact">Comment puis-je te contacter ?</label>
           <p class="hint">E-mail, natel, instagram ou autre moyen de contact.</p>
-          <textarea id="contact" name="contact" placeholder="Par exemple : prenom.nom@email.com, 079 123 45 67, Instagram…" required></textarea>
+          <textarea id="contact" name="contact" placeholder="prenom.nom@email.com, 079 123 45 67, Instagram, etc." required></textarea>
         </div>
 
         <div class="question">
@@ -528,7 +609,7 @@ simple affiche avec mon contact. J'espère que cela t'emballera !
           <textarea
             id="comment"
             name="comment"
-            placeholder="Tu peux écrire ici ce que tu veux ajouter…"
+            placeholder="Tu es vegan ? ça m'est égal ! Tu peux quand même l'écrire ici, mais je préférerais quelque chose en rapport avec le formulaire."
           ></textarea>
         </div>
 
@@ -541,8 +622,7 @@ simple affiche avec mon contact. J'espère que cela t'emballera !
             et les contacter dans le cadre de rencontres ou simplement de discussion.
           </p>
           <p>
-            Elles ne sont pas vendues et ne sont pas utilisées à des fins de prospection
-            commerciale sans accord séparé.
+            Elles ne seront pas utilisées à d'autres fins, ni partagées.
           </p>
 
           <p class="contact-before-form">
@@ -552,7 +632,7 @@ simple affiche avec mon contact. J'espère que cela t'emballera !
         </div>
 
         <div class="submit-area">
-          <button type="submit">Envoyer →</button>
+          <button type="submit">Envoyer !</button>
           <p class="submit-note">Environ 5 minutes. Aucune obligation de rejoindre un projet.</p>
         </div>
       </form>
@@ -574,6 +654,22 @@ simple affiche avec mon contact. J'espère que cela t'emballera !
     const form = document.getElementById("creativeForm");
     const progressFill = document.getElementById("progressFill");
     const progressText = document.getElementById("progressText");
+
+	<!--MODIF 4 POUR AJOUTER BOUTON-->
+    const participateButton = document.getElementById("participateButton");
+    const participateArea = document.getElementById("participateArea");
+    const questionForm = document.getElementById("questionForm");
+
+    participateButton.addEventListener("click", function() {
+  	questionForm.classList.add("is-visible");
+    participateArea.style.display = "none";
+
+  	questionForm.scrollIntoView({
+    	   behavior: "smooth",
+         block: "start"
+  	});
+   });
+
 
     function updateProgress() {
       const questions = document.querySelectorAll(".question");
